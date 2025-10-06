@@ -73,33 +73,26 @@ Result pagination
 | **Caching**       | Flask-Caching                                            |
 | **Visualization** | Dynamic schema and table rendering                       |
 
-🏗️ Project Structure
+## 🏗️ Project Structure
 
 NLP_Query_Engine/
-│
-├── app.py                        # Flask app entry point
-│
-├── routes/                       # API route modules
-│   └── ingest.py                 # Routes for database & document ingestion
-│
-├── services/                     # Business logic and helpers
-│   └── schema_discover.py        # Extracts table, column, FK info from database
-│
+├── app.py # Flask app entry point
+├── routes/ # API route modules
+│ └── ingest.py # Routes for database & document ingestion
+├── services/ # Business logic and helpers
+│ └── schema_discover.py # Extracts table, column, FK info from database
 ├── templates/
-│   └── index.html                # Main frontend UI
-│
+│ └── index.html # Main frontend UI
 ├── static/
-│   ├── css/
-│   │   └── style.css             # UI styles and animations
-│   ├── js/
-│   │   └── main.js               # Frontend interactivity (query, upload, etc.)
-│   └── img/
-│       └── logo.png              # App icon/logo
-│
-├── uploads/                      # User-uploaded documents
-│
-├── requirements.txt              # Project dependencies
-└── README.md                     # Project documentation
+│ ├── css/
+│ │ └── style.css # UI styles and animations
+│ ├── js/
+│ │ └── main.js # Frontend interactivity (query, upload, etc.)
+│ └── img/
+│ └── logo.png # App icon/logo
+├── uploads/ # User-uploaded documents
+├── requirements.txt # Project dependencies
+└── README.md # Project documentation
 
 ⚙️ Setup Instructions
 
@@ -146,4 +139,5 @@ Jayant Yadav
 💼 Data Scientist | AI & ML Developer
 
 LinkedIn: https://www.linkedin.com/in/jayant-yadav-a22b98283
+
 GitHub: https://github.com/CoderJaynt
