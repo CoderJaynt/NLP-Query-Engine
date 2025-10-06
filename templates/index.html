@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NLP Query Engine</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo-area">
+      <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" />
+      <h1>NLP Query Engine </h1>
+    </div>
+    <div class="actions">
+      <button id="clear-cache">🧹 Clear Cache</button>
+      <button id="theme-toggle">🌙</button>
+    </div>
+  </nav>
+
+  <!-- MAIN INTERFACE -->
+  <main>
+    <!-- Step 1: Database Connection -->
+    <section class="card">
+      <h2> Database Connection</h2>
+      <input id="conn-string" placeholder="mysql+pymysql://user:password@localhost/dbname" />
+      <button id="test-conn">Test Connection</button>
+      <div id="conn-status"></div>
+    </section>
+
+    <!-- Step 2: Schema Visualization -->
+    <section class="card">
+      <h2> Discovered Schema</h2>
+      <div id="schema-output"></div>
+    </section>
+
+    <!-- Step 3: Document Upload -->
+    <section class="card">
+      <h2> Upload Documents</h2>
+      <div id="drop-zone">
+        <p>📂 Drag & Drop files here (PDF, CSV, DOCX)</p>
+      </div>
+      <input type="file" id="file-input" multiple hidden />
+      <div id="upload-progress"></div>
+    </section>
+
+    <!-- Step 4: Query Input -->
+    <section class="card">
+      <h2> Ask Your Query</h2>
+      <div class="query-box">
+        <input id="query-input" placeholder="e.g. Show employees with salary above 50000 or Summarize uploaded report..." />
+        <div class="query-buttons">
+          <button id="run-db">Run on DB</button>
+          <button id="run-doc">Search Docs</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 5: Results Section -->
+    <section class="card">
+      <h2> Results</h2>
+      <div id="metrics"></div>
+      <div id="results"></div>
+    </section>
+
+    
+  </main>
+
+  <footer>
+    <p>© 2025 NLP Query Engine | Powered by Flask + Groq | By Jayant</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

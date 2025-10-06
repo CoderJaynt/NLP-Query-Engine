@@ -1,0 +1,121 @@
+/* Dynamic dark-blue animated background */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(270deg, #001f3f, #004d7a, #001f3f);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-area img { width: 35px; height: 35px; }
+.logo-area h1 { font-size: 1.4rem; color: #fff; }
+
+.actions button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+.actions button:hover { background: #00aaff; }
+
+/* Layout */
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Card panels */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px rgba(0,174,255,0.4);
+}
+
+/* Query box */
+.query-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.query-buttons { display: flex; gap: 10px; }
+input {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+/* Drag & Drop Box */
+#drop-zone {
+  border: 2px dashed rgba(0,174,255,0.8);
+  border-radius: 12px;
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(0,0,0,0.2);
+  color: #ccc;
+  transition: all 0.4s ease;
+}
+#drop-zone:hover {
+  background: rgba(0,174,255,0.2);
+  box-shadow: 0 0 20px #00aaff;
+  transform: scale(1.02);
+}
+
+/* Results */
+#results table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#results th, #results td {
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 0.5rem;
+  text-align: left;
+}
+#sources {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #aaa;
+}
